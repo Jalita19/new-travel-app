@@ -1,0 +1,77 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Navbar Styles */
+nav {
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background: #575757;
+}
+
+/* Home Page Styles */
+h1 {
+    text-align: center;
+    margin: 20px;
+}
+
+/* Map Page Styles */
+.leaflet-container {
+    height: 100vh;
+    width: 100%;
+}
+
+/* Add Location Form Styles */
+form {
+    background: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+input, textarea, select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #575757;
+}
+
+.marker {
+    background-color: red; /* Change this to your desired color */
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+  }
