@@ -1,0 +1,50 @@
+.detail-view {
+    max-width: 800px; /* Restricts the width of the detail view */
+    margin: 2rem auto; /* Center aligns the component with top and bottom margin */
+    padding: 1.5rem; /* Adds padding inside the component */
+    border: 1px solid #ddd; /* Light border for definition */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    background-color: #fff; /* White background for contrast */
+}
+
+.detail-view h2 {
+    font-size: 2rem; /* Large title */
+    margin-bottom: 1rem; /* Space below the title */
+    color: #333; /* Dark color for title */
+}
+
+.detail-view img {
+    width: 100%; /* Makes image responsive */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 8px; /* Rounded corners for images */
+}
+
+.detail-view p {
+    font-size: 1rem; /* Standard font size for text */
+    line-height: 1.5; /* Improved line spacing for readability */
+    color: #555; /* Slightly lighter color for text */
+    margin-bottom: 1rem; /* Space below paragraphs */
+}
+
+.detail-view .info {
+    margin-top: 1.5rem; /* Space above additional information */
+    font-weight: bold; /* Highlights additional info */
+}
+
+.detail-view .button {
+    display: inline-block; /* Makes button act as a block */
+    padding: 0.5rem 1rem; /* Button padding */
+    margin-top: 1rem; /* Space above button */
+    background-color: #007bff; /* Primary color for the button */
+    color: white; /* Text color for button */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners for button */
+    text-decoration: none; /* No underline */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+.detail-view .button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}

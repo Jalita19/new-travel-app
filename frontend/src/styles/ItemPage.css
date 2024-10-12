@@ -1,0 +1,49 @@
+.item-page {
+    max-width: 800px; /* Restricts width of item page */
+    margin: 2rem auto; /* Center align */
+    padding: 2rem; /* Padding around content */
+    background-color: #fff; /* White background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.item-page h2 {
+    font-size: 2.5rem; /* Larger title size */
+    color: #333; /* Dark title color */
+    margin-bottom: 1rem; /* Space below title */
+}
+
+.item-page img {
+    width: 100%; /* Full-width responsive image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners for images */
+}
+
+.item-page p {
+    font-size: 1.2rem; /* Standard text size */
+    line-height: 1.5; /* Improved line spacing */
+    color: #555; /* Lighter color for text */
+    margin-bottom: 1rem; /* Space below paragraphs */
+}
+
+.item-page .info {
+    font-weight: bold; /* Highlight additional info */
+    margin-top: 1.5rem; /* Space above additional info */
+}
+
+.item-page .button {
+    display: inline-block; /* Inline block for button */
+    padding: 0.7rem 1.5rem; /* Padding for button */
+    margin-top: 1rem; /* Space above button */
+    background-color: #007bff; /* Primary color for button */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners for button */
+    text-decoration: none; /* No underline */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Transition for hover */
+}
+
+.item-page .button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}

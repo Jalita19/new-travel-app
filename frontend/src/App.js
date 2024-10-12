@@ -1,26 +1,24 @@
+// src/App.js
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Use Routes instead of Switch
-import MapPage from './pages/MapPage'; // Adjust the path if needed
-import AddLocationPage from './pages/AddLocationPage'; // Adjust the path if needed
-import Login from './pages/Login'; // Adjust the path if needed
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import RestaurantsPage from './pages/RestaurantsPage';
+import HotelsPage from './pages/HotelsPage';
+import AttractionsPage from './pages/AttractionsPage';
+import MapPage from './pages/MapPage';
+import MainComponent from './components/MainComponent';
 
 const App = () => {
   return (
     <Router>
-      <div>
-        <nav>
-          <a href="/">Map</a>
-          <a href="/add">Add Location</a>
-          <a href="/login">Login</a>
-        </nav>
-        <Routes> {/* Use Routes here */}
-          <Route path="/" element={<MapPage />} /> {/* Use element prop instead of component */}
-          <Route path="/add" element={<AddLocationPage />} />
-          <Route path="/login" element={<Login />} />
-        </Routes>
-        {/* Fallback content */}
-        <div>Welcome to the Travel App!</div>
-      </div>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<MainComponent />} />
+        <Route path="/restaurants" element={<RestaurantsPage />} />
+        <Route path="/hotels" element={<HotelsPage />} />
+        <Route path="/attractions" element={<AttractionsPage />} />
+        <Route path="/map" element={<MapPage />} />
+      </Routes>
     </Router>
   );
 };

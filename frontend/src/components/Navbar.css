@@ -1,0 +1,47 @@
+/* src/components/Navbar.css */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: linear-gradient(90deg, #ff7e5f, #feb47b); /* Gradient background */
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin: 0 1.5rem;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+a:hover {
+    color: #feb47b; /* Change color on hover */
+    transform: scale(1.1); /* Scale effect on hover */
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center; /* Center icons vertically */
+    font-size: 24px; /* Adjust size */
+    color: #fff; /* Change color to white */
+}
+
+.navbar-logo i {
+    margin-right: 8px; /* Space between icons and text */
+}
+
+  
