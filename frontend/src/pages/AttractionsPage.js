@@ -9,7 +9,7 @@ const AttractionsPage = () => {
       { id: 3, name: 'Yosemite National Park', info: 'Famous for its stunning granite cliffs and waterfalls.' },
       { id: 4, name: 'Hollywood Sign', info: 'Famous landmark overlooking Los Angeles.' },
     ],
-    New: [
+    NYC: [
       { id: 5, name: 'Statue of Liberty', info: 'Iconic symbol of freedom located in New York Harbor.' },
       { id: 6, name: 'Central Park', info: 'Large urban park in Manhattan, great for walking and picnics.' },
       { id: 7, name: 'Empire State Building', info: 'Famous skyscraper with stunning views of NYC.' },
@@ -28,8 +28,8 @@ const AttractionsPage = () => {
       { id: 14, name: 'The Alamo', info: 'Historic site in San Antonio known for the Battle of the Alamo.' },
       { id: 15, name: 'Space Center Houston', info: 'Museum and educational center featuring NASA’s mission control.' },
     ],
-    South : [
-      { id: 16, name: 'Mount Rushmore', info: 'Famous sculpture featuring the faces of four U.S. presidents.' },
+    'New Jersey': [
+      { id: 16, name: 'Newark Liberty Bell', info: 'Famous landmark in Newark, New Jersey.' },
     ],
     Arizona: [
       { id: 17, name: 'Grand Canyon', info: 'Massive canyon carved by the Colorado River.' },
@@ -45,6 +45,33 @@ const AttractionsPage = () => {
       { id: 21, name: 'Fenway Park', info: 'Historic baseball park in Boston.' },
       { id: 22, name: 'Freedom Trail', info: 'Walking trail through historic sites in Boston.' },
     ],
+    'Pennsylvania': [
+      { id: 23, name: 'Lincoln Memorial', info: 'Famous landmark in Pittsburgh.' },
+    ],  
+    Georgia: [
+      { id: 24, name: 'Columbus Circle', info: 'Famous landmark in Atlanta.' },
+    ],
+    Ohio: [
+      { id: 25, name: 'Columbus Circle', info: 'Famous landmark in Columbus, Ohio.' },
+    ],
+    'Rhode Island': [
+      { id: 26, name: 'Rhode Island', info: 'Famous landmark in Providence, Rhode Island.' },
+    ],
+    'South Carolina': [
+      { id: 27, name: 'University of South Carolina', info: 'Famous landmark in Columbia, South Carolina.' },
+    ],
+    Oregon: [
+      { id: 28, name: 'Mt. Hood', info: 'Famous landmark in Eugene, Oregon.' },
+    ],
+    Alaska: [
+      { id: 30, name: 'Anchorage', info: 'Famous landmark in Anchorage, Alaska.' },
+    ],
+    Hawaii: [
+      { id: 35, name: 'Hawaii Volcanoes', info: 'Famous landmark in Honolulu, Hawaii.' },
+    ],
+    Michigan: [
+      { id: 37, name: 'Grand Canyon', info: 'Famous landmark in Lansing, Michigan.' },
+      ]
     // Add more states and attractions as needed
   };
 

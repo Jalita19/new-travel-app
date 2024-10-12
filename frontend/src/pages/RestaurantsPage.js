@@ -10,7 +10,7 @@ const RestaurantsPage = () => {
       { id: 4, name: 'In-N-Out Burger', info: 'Iconic fast-food chain known for its burgers and fries.' },
       { id: 5, name: 'Sushi Nakazawa', info: 'High-end sushi restaurant in San Diego.' },
     ],
-    New : [
+    NYC : [
       { id: 6, name: 'Eleven Madison Park', info: 'Fine dining with a focus on seasonal ingredients.' },
       { id: 7, name: 'Katz’s Delicatessen', info: 'Iconic deli famous for its pastrami sandwiches.' },
       { id: 8, name: 'Peter Luger Steak House', info: 'Historic steakhouse known for its quality cuts.' },
@@ -51,6 +51,17 @@ const RestaurantsPage = () => {
       { id: 29, name: 'Le Pigeon', info: 'French-inspired cuisine with a creative twist.' },
       { id: 30, name: 'Pok Pok', info: 'Renowned for its Thai street food.' },
     ],
+    Washington: [
+      { id: 31, name: 'Cafe 14', info: 'Classic American restaurant with a focus on seasonal ingredients.' },
+      { id: 32, name: 'Sushi King', info: 'Japanese cuisine known for its sushi and seasonal flavors.' },
+    ],
+    Arizona: [
+      { id: 33, name: 'Taco Bell', info: 'Mexican-inspired fast food chain known for its taco treats.' },   
+    ],
+    California: [
+      { id: 34, name: 'Casa Luna', info: 'Mexican restaurant with a focus on seasonal ingredients.' },
+      { id: 35, name: 'Casa Luna', info: 'Mexican restaurant with a focus on seasonal ingredients.' },   
+    ],  
     // Add more states and restaurants as needed
   };
 

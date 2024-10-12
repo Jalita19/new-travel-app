@@ -9,7 +9,7 @@ const HotelsPage = () => {
       { id: 2, name: 'Hotel Nikko San Francisco', info: 'Elegant hotel with a Japanese influence.' },
       { id: 3, name: 'Fairmont San Francisco', info: 'Historic hotel with stunning views of the Bay.' },
     ],
-    New : [
+    NYC : [
       { id: 4, name: 'The St. Regis New York', info: 'Luxurious hotel known for its exceptional service.' },
       { id: 5, name: 'The Standard, High Line', info: 'Trendy hotel with views of the Hudson River.' },
       { id: 6, name: 'Four Seasons Hotel New York Downtown', info: 'Upscale hotel in the heart of downtown.' },
@@ -39,6 +39,26 @@ const HotelsPage = () => {
       { id: 18, name: 'The Brown Palace Hotel and Spa', info: 'Historic hotel in Denver with luxurious accommodations.' },
       { id: 19, name: 'Vail Marriott Mountain Resort', info: 'Resort located near Vail Mountain ski area.' },
     ],
+    Washington: [
+      { id: 20, name: 'The Westin Seattle', info: 'Luxury hotel with modern amenities and views of Seattle.' },
+      { id: 21, name: 'Holiday Inn Seattle', info: 'Elegant hotel with a spa and spa treatments.' },    
+    ],
+    'New Jersey': [
+      { id: 22, name: 'The Cape May', info: 'Historic hotel with stunning views of Cape May.' },
+      { id: 23, name: 'Hilton Garden Inn New York', info: 'Upscale hotel with modern amenities and views of Manhattan.' },
+    ],
+    Pennsylvania: [
+      { id: 24, name: 'The Mirage', info: 'Luxury hotel with a spa and spa treatments.' },
+      { id: 25, name: 'The Mirage', info: 'Luxury hotel with a spa and spa treatments.' },
+    ],  
+    Georgia: [
+      { id: 26, name: 'The Mirage', info: 'Luxury hotel with a spa and spa treatments.' },
+      { id: 27, name: 'The Mirage', info: 'Luxury hotel with a spa and spa treatments.' },
+    ],  
+    Arizona: [
+      { id: 28, name: 'The Mirage', info: 'Luxury hotel with a spa and spa treatments.' },
+      { id: 29, name: 'The Mirage', info: 'Luxury hotel with a spa and spa treatments.' },          
+    ]    
     // Add more states and hotels as needed
   };
 

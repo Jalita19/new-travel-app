@@ -39,9 +39,11 @@ a:hover {
     font-size: 24px; /* Adjust size */
     color: #fff; /* Change color to white */
 }
-
 .navbar-logo i {
     margin-right: 8px; /* Space between icons and text */
 }
 
+.navbar-logo span {
+    margin-left: 8px; /* Space between icons and travel app text */
+}
   

@@ -1,6 +1,6 @@
 // src/components/PopupCard.js
 import React from 'react';
-import '../styles/PopupCard.css'; // Make sure the path is correct
+import '../styles/PopupCard.css'; // Ensure the path is correct
 
 const PopupCard = ({ item, onClose }) => {
     return (
@@ -9,6 +9,7 @@ const PopupCard = ({ item, onClose }) => {
             <h3>{item.name}</h3>
             <p>{item.info}</p>
             {item.image && <img src={item.image} alt={item.name} className="popup-image" />}
+            <div className="details">{item.details}</div> {/* Display additional details if available */}
         </div>
     );
 };
