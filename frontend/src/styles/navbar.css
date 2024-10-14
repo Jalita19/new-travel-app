@@ -1,10 +1,11 @@
-/* src/components/Navbar.css */
+
+/* src/styles/navbar.css */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background: linear-gradient(90deg, #ff7e5f, #feb47b); /* Gradient background */
+    background: linear-gradient(90deg, #ff7e5f, #feb47b);
     color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -29,21 +30,21 @@ a {
 }
 
 a:hover {
-    color: #feb47b; /* Change color on hover */
-    transform: scale(1.1); /* Scale effect on hover */
+    color: #feb47b;
+    transform: scale(1.1);
 }
 
 .navbar-logo {
     display: flex;
-    align-items: center; /* Center icons vertically */
-    font-size: 24px; /* Adjust size */
-    color: #fff; /* Change color to white */
+    align-items: center;
+    font-size: 24px;
+    color: #fff;
 }
+
 .navbar-logo i {
-    margin-right: 8px; /* Space between icons and text */
+    margin-right: 8px;
 }
 
 .navbar-logo span {
-    margin-left: 8px; /* Space between icons and travel app text */
+    margin-left: 8px;
 }
-  

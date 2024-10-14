@@ -6,7 +6,7 @@ import data from '../data/data'; // Import your data
 
 // Define icon URLs
 const iconUrls = {
-    restaurant: 'http://example.com/restaurant-icon.png', // Replace with actual URLs
+    restaurant: 'https://www.thomaskeller.com/tfl', // Replace with actual URLs
     hotel: 'http://example.com/hotel-icon.png',
     attraction: 'http://example.com/attraction-icon.png',
 };
@@ -52,7 +52,12 @@ const GoogleMapComponent = () => {
                     />
                 ))}
             </GoogleMap>
-            {selectedItem && <PopupCard item={selectedItem} onClose={handleClosePopup} />} {/* Show popup */}
+            {selectedItem && (
+                <PopupCard 
+                    item={selectedItem} 
+                    onClose={handleClosePopup} 
+                />
+            )} {/* Show popup */}
         </LoadScript>
     );
 };

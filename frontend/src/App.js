@@ -7,6 +7,10 @@ import HotelsPage from './pages/HotelsPage';
 import AttractionsPage from './pages/AttractionsPage';
 import MapPage from './pages/MapPage';
 import MainComponent from './components/MainComponent';
+import BlogPage from './pages/BlogPage';
+import BlogPostPage from './pages/BlogPostPage';
+import Login from './components/Login'; // Import Login component
+import SignUp from './components/SignUp'; // Import SignUp component
 
 const App = () => {
   return (
@@ -18,6 +22,10 @@ const App = () => {
         <Route path="/hotels" element={<HotelsPage />} />
         <Route path="/attractions" element={<AttractionsPage />} />
         <Route path="/map" element={<MapPage />} />
+        <Route path="/blog" element={<BlogPage />} />
+        <Route path="/blog/:slug" element={<BlogPostPage />} />
+        <Route path="/login" element={<Login />} /> {/* Login route */}
+        <Route path="/signup" element={<SignUp />} /> {/* SignUp route */}
       </Routes>
     </Router>
   );

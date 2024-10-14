@@ -58,11 +58,7 @@ const RestaurantsPage = () => {
     Arizona: [
       { id: 33, name: 'Taco Bell', info: 'Mexican-inspired fast food chain known for its taco treats.' },   
     ],
-    California: [
-      { id: 34, name: 'Casa Luna', info: 'Mexican restaurant with a focus on seasonal ingredients.' },
-      { id: 35, name: 'Casa Luna', info: 'Mexican restaurant with a focus on seasonal ingredients.' },   
-    ],  
-    // Add more states and restaurants as needed
+    // Add states and restaurants as needed
   };
 
   return (

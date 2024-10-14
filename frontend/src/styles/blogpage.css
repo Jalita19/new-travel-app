@@ -1,0 +1,28 @@
+/* src/styles/blogpage.css */
+.blog-page {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.blog-posts {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.blog-post {
+  border: 1px solid #ddd;
+  padding: 20px;
+  background-color: #fff; /* Ensure background matches */
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post h2 {
+  color: #ff7e5f; /* Match gradient colors */
+  margin-top: 0;
+}
+
+.blog-post p {
+  color: #555;
+}
