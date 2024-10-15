@@ -1,35 +1,23 @@
 // src/pages/BlogPage.js
-import React, { useState, useEffect } from 'react';
-import { onAuthStateChanged } from 'firebase/auth';
-import { auth } from '../firebase';
+import React from 'react';
 import '../styles/blogpage.css';
-import blogPosts from './blogPosts';
+import blogPosts from '../data/blogPosts'; // Import blog posts data
 
 const BlogPage = () => {
-  const [user, setUser] = useState(null);
-
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      setUser(user);
-    });
-    return unsubscribe;
-  }, []);
-
-  if (!user) {
-    return <div>Please log in to view the blog.</div>;
-  }
-
   return (
     <div className="blog-container">
-      <h1>Travel Blog</h1>
-      {blogPosts.map((post, index) => (
-        <article className="blog-post" key={index}>
-          <h2>{post.title}</h2>
-          <small>{post.date}</small>
-          <p>{post.content.substring(0, 150)}...</p>
-          <a href={`/blog/${post.slug}`}>Read more</a>
-        </article>
-      ))}
+      <h1 className="blog-title">Welcome to My Travel Blog</h1>
+      <p className="blog-intro">Your go-to resource for tips on budget traveling, flight deals, and more!</p>
+      <div className="blog-posts">
+        {blogPosts.map((post, index) => (
+          <article className="blog-post" key={index}>
+            <h2 className="post-title">{post.title}</h2>
+            <small className="post-date">{post.date}</small>
+            <p className="post-excerpt">{post.content.substring(0, 150)}...</p>
+            <a className="read-more" href={`/blog/${post.slug}`}>Read more</a>
+          </article>
+        ))}
+      </div>
     </div>
   );
 };

@@ -1,0 +1,33 @@
+/* src/styles/ParentComponent.css */
+
+.parent-container {
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #ff7e5f; /* Match the gradient colors */
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.open-popup-btn {
+    background-color: #ff7e5f; /* Button color */
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.open-popup-btn:hover {
+    background-color: #feb47b; /* Button hover color */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.open-popup-btn:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 126, 95, 0.5); /* Focus outline */
+}

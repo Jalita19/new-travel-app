@@ -1,0 +1,79 @@
+.home-container {
+    font-family: 'Lora', serif;
+    color: #333;
+    background-color: #f5f5f5;
+    padding: 20px;
+  }
+  
+  .hero {
+    /* background-image: url(..path/to/your/paris.jpg'); Add a stunning travel image */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  
+  .hero p {
+    font-size: 1.5rem;
+  }
+  
+  .explore-button {
+    padding: 15px 25px;
+    background-color: #ff7f50; /* Use a color that matches your theme */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .explore-button:hover {
+    background-color: #ff5722; /* Darker shade for hover */
+  }
+  
+  .travel-tips {
+    margin: 50px 0;
+  }
+  
+  .tips-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .tip {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin: 10px;
+    flex: 1;
+    min-width: 300px; /* Responsive sizing */
+  }
+  
+  .signup-login {
+    display: flex;
+    justify-content: space-around;
+    margin: 50px 0;
+  }
+  
+  .signup-container,
+  .login-container {
+    width: 45%;
+  }
+  
+  .footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: white;
+    position: relative;
+  }
+  

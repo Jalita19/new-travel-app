@@ -6,12 +6,29 @@ import '../styles/MapComponent.css'; // Import styles
 
 const MapComponent = () => {
   const data = {
-    restaurants: {
+    attractions: {
       California: [
-        { id: 1, name: 'The French Laundry', lat: 38.4042, lng: -122.3652, info: 'Three Michelin-starred restaurant in Yountville.' },
-        { id: 2, name: 'Bestia', lat: 34.0403, lng: -118.2501, info: 'Renowned Italian restaurant in Los Angeles.' },
+        {
+          id: 5,
+          name: 'Yosemite National Park',
+          info: 'A beautiful national park in California.',
+          details: 'A detailed description of Yosemite National Park...',
+          image: 'https://example.com/yosemite.jpg', // Add image URL
+          lat: 37.8651,
+          lng: -119.5383,
+        },
+        {
+          id: 6,
+          name: 'Golden Gate Bridge',
+          info: 'Iconic suspension bridge in San Francisco.',
+          details: 'A detailed description of the Golden Gate Bridge...',
+          image: 'https://example.com/golden-gate.jpg',
+          lat: 37.8199,
+          lng: -122.4783,
+        },
+        // Add more attractions...
       ],
-      // Add more states and their restaurants...
+      // Add more states...
     },
   };
 
@@ -26,9 +43,9 @@ const MapComponent = () => {
   };
 
   return (
-    <div>
+    <div className="map-container">
       <GoogleMapComponent 
-        locations={Object.entries(data.restaurants).flatMap(([state, items]) => items)} 
+        locations={Object.entries(data.attractions).flatMap(([state, items]) => items)} 
         onMarkerClick={handleMarkerClick} // Pass the handler to GoogleMapComponent
       />
       {selectedItem && (

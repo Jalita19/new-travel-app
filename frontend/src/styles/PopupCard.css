@@ -1,50 +1,35 @@
-/* src/components/styles/PopupCard.css */
+/* src/styles/PopupCard.css */
 .popup-card {
-    min-width: 200px;
-    padding: 15px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    position: relative;
+    position: absolute; /* Position it absolutely on the map */
+    background-color: white; /* Card background color */
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px; /* Smaller padding */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    width: 150px; /* Set a smaller width */
+    z-index: 1000; /* Ensure it stays above the map */
 }
 
-.close-button {
-    background: none;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-    position: absolute;
-    top: 5px;
-    right: 10px;
+.popup-card img {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Slightly rounded corners for images */
 }
 
-.popup-image {
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
-    margin: 10px 0;
-}
-
-.popup-card h3 {
-    margin: 0;
-    font-size: 1.5rem;
+.popup-card h2 {
+    font-size: 16px; /* Smaller font size */
+    margin: 5px 0; /* Adjust margin */
 }
 
 .popup-card p {
-    margin: 5px 0;
-    font-size: 1rem;
+    font-size: 12px; /* Smaller font size for description */
+    margin: 5px 0; /* Adjust margin */
 }
 
 .popup-card button {
-    margin-top: 10px;
-    padding: 5px 10px;
-    background-color: #4CAF50; /* Example button color */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.popup-card button:hover {
-    background-color: #45a049; /* Darker shade on hover */
+    background-color: #ff4081; /* Example button color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 5px; /* Smaller padding */
+    cursor: pointer; /* Pointer cursor */
 }

@@ -1,0 +1,55 @@
+/* src/styles/blogpostpage.css */
+
+.blog-post-container {
+    max-width: 800px; /* Set a maximum width for better readability */
+    margin: 20px auto; /* Center the container */
+    padding: 30px; /* Increase padding for a more spacious feel */
+    border: 1px solid #ddd; /* Subtle border for definition */
+    border-radius: 10px; /* Round corners for a modern look */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    background-color: #fff; /* White background for contrast */
+    font-family: 'Lora', serif; /* Match the blog's font style */
+  }
+  
+  .blog-post-container h1 {
+    font-size: 2.5em; /* Larger title for prominence */
+    color: #333; /* Darker color for better readability */
+    margin-bottom: 15px; /* Space below title */
+  }
+  
+  .blog-post-container .post-date {
+    font-size: 1rem; /* Smaller font for date */
+    color: #777; /* Softer color for date */
+    margin-bottom: 20px; /* Space below date */
+  }
+  
+  .blog-post-container .post-content {
+    font-size: 1.2em; /* Base font size for content */
+    line-height: 1.6; /* Improved line height for readability */
+    color: #444; /* Darker text for contrast */
+  }
+  
+  .blog-post-container .post-content ul {
+    padding-left: 20px; /* Indent for list items */
+    margin: 15px 0; /* Space around lists */
+  }
+  
+  .blog-post-container .post-content li {
+    margin-bottom: 10px; /* Space between list items */
+  }
+  
+  .back-link {
+    display: inline-block; /* Make link block-level */
+    margin-top: 20px; /* Space above link */
+    padding: 10px 15px; /* Padding for the link */
+    background-color: #ff7f50; /* Consistent color with the blog theme */
+    color: white; /* White text for contrast */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners for the button */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+  }
+  
+  .back-link:hover {
+    background-color: #ff5722; /* Darker shade for hover effect */
+  }
+  

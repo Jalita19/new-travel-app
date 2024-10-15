@@ -1,11 +1,10 @@
-// src/pages/MapPage.js
 import React, { useEffect, useState } from 'react';
-import { GoogleMap, LoadScript, Marker } from '../components/Map'; // Adjust the import based on your structure
+import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api'; // Import from the library
 import axios from 'axios';
 
 // Define icon URLs
 const iconUrls = {
-  restaurant: 'http://example.com/restaurant-icon.png', // Replace with actual URLs
+  restaurant: '<i class="fa-solid fa-utensils"></i>', // Replace with actual URLs
   hotel: 'http://example.com/hotel-icon.png',
   attraction: 'http://example.com/attraction-icon.png',
 };
@@ -15,7 +14,7 @@ const MapPage = () => {
 
   const center = {
     lat: 39.8283, // Center of the contiguous United States
-    lng: -98.5795
+    lng: -98.5795,
   };
 
   const zoomLevel = 4; // Adjust zoom level for the entire U.S.
@@ -36,12 +35,12 @@ const MapPage = () => {
   return (
     <LoadScript googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}>
       <GoogleMap center={center} zoom={zoomLevel}>
-        {locations.map(location => (
+        {locations.map((location) => (
           <Marker
             key={location.id}
             position={{
               lat: location.coordinates.lat,
-              lng: location.coordinates.lng
+              lng: location.coordinates.lng,
             }}
             icon={iconUrls[location.type]} // Use the icon based on type
             onClick={() => {
@@ -55,4 +54,3 @@ const MapPage = () => {
 };
 
 export default MapPage;
-
