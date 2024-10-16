@@ -113,6 +113,32 @@ body {
     color: #7f8c8d;
   }
   
+  /* Custom InfoWindow styling */
+  .custom-info-window {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+    background-color: #fff; /* White background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    padding: 10px; /* Padding inside the InfoWindow */
+  }
+  
+  .custom-info-window h3 {
+    margin: 0 0 5px 0; /* Margin for heading */
+    font-size: 16px; /* Heading size */
+    color: #007BFF; /* Custom heading color */
+  }
+  
+  .custom-info-window p {
+    margin: 0; /* No margin for paragraphs */
+  }
+  
+  .custom-info-window img {
+    width: 100%; /* Responsive image */
+    border-radius: 4px; /* Rounded corners for images */
+  }
+  
   /* Scrollbar for the place list */
   .place-list::-webkit-scrollbar {
     width: 8px;
@@ -139,5 +165,8 @@ body {
       margin-bottom: 20px;
     }
   }
+  
+  
+  
   
   
