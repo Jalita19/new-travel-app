@@ -1,47 +1,45 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/HomePage.css';
-import Signup from '../components/SignUp'; // Assuming you already have this component
-import Login from '../components/Login'; // Assuming you have a Login component
 
 const HomePage = () => {
   return (
-    <div className="home-container">
-      <header className="hero">
-        <h1>Explore the World</h1>
-        <p>Your adventure starts here!</p>
-        <button className="explore-button">Explore Now</button>
+    <div className="home-page">
+      <header className="header">
+        <h1>Welcome to Your Travel Adventure!</h1>
+        <p>Discover attractions, hotels, and restaurants around the world.</p>
+        <div className="auth-buttons">
+          <Link to="/signup" className="auth-button">Sign Up</Link>
+          <Link to="/login" className="auth-button">Login</Link>
+        </div>
       </header>
-      
-      <section className="travel-tips">
-        <h2>Travel Tips</h2>
-        <div className="tips-container">
-          <div className="tip">
-            <h3>Finding Cheap Flights</h3>
-            <p>Learn how to find the best deals on flights using various online tools and strategies...</p>
-          </div>
-          <div className="tip">
-            <h3>Budget Traveling</h3>
-            <p>Discover how to travel on a budget, including affordable accommodations and meals...</p>
-          </div>
-          <div className="tip">
-            <h3>Packing Light</h3>
-            <p>Tips and tricks for packing efficiently to avoid excess baggage fees and travel stress...</p>
-          </div>
+
+      <section className="gallery">
+        <h2>Explore the World</h2>
+        <div className="image-grid">
+          <img src="/images/post2.jpg" alt="Travel Destination 1" />
+          <img src="/images/travel2.jpg" alt="Travel Destination 2" />
+          <img src="/images/travel3.jpg" alt="Travel Destination 3" />
+          <img src="/images/travel4.jpg" alt="Travel Destination 4" />
+          <img src="/images/travel5.jpg" alt="Travel Destination 5" />
         </div>
       </section>
 
-      <section className="signup-login">
-        <div className="signup-container">
-          <Signup />
-        </div>
-        <div className="login-container">
-          <Login />
-        </div>
+      <section className="content">
+        <h2>Travel Tips & Guides</h2>
+        <article>
+          <h3>Finding Cheap Flights</h3>
+          <p>Learn how to book flights at the best prices and save on your next trip.</p>
+        </article>
+        <article>
+          <h3>Packing Light for Trips</h3>
+          <p>Tips on how to pack efficiently and avoid overpacking.</p>
+        </article>
+        <article>
+          <h3>Top Attractions to Visit</h3>
+          <p>Discover must-see attractions in various destinations.</p>
+        </article>
       </section>
-
-      <footer className="footer">
-        <p>© 2024 Your Travel Blog. All rights reserved.</p>
-      </footer>
     </div>
   );
 };

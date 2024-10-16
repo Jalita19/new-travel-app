@@ -1,44 +1,32 @@
 // src/components/SignUp.js
-import React, { useState } from 'react';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '../firebase';
+import React from 'react';
+import './SignUp.css'; // Ensure the CSS file is in the same directory
 
 const SignUp = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState(null);
-
-  const handleSignUp = async (e) => {
-    e.preventDefault();
-    try {
-      await createUserWithEmailAndPassword(auth, email, password);
-      alert('Successfully signed up!');
-    } catch (err) {
-      setError(err.message);
-    }
-  };
-
   return (
-    <div className="auth-container">
-      <h2>Sign Up</h2>
-      <form onSubmit={handleSignUp}>
-        <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <button type="submit">Sign Up</button>
-      </form>
-      {error && <p>{error}</p>}
+    <div className="signup-page">
+      <div className="signup-header">
+        <img src="/images/post3.jpg" alt="Travel" className="signup-header-image" /> {/* Direct path */}
+        <h1>Join Us!</h1>
+      </div>
+      <div className="signup-form-container">
+        <form className="signup-form">
+          <label htmlFor="username">Username</label>
+          <input type="text" id="username" placeholder="Choose a username" required />
+
+          <label htmlFor="email">Email</label>
+          <input type="email" id="email" placeholder="Enter your email" required />
+
+          <label htmlFor="password">Password</label>
+          <input type="password" id="password" placeholder="Create a password" required />
+
+          <button type="submit">Sign Up</button>
+        </form>
+      </div>
+      <p className="travel-tip">"The world is a book, and those who do not travel read only one page."</p>
     </div>
   );
 };
 
 export default SignUp;
+

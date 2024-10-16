@@ -1,42 +1,26 @@
 // src/components/Login.js
-import React, { useState } from 'react';
-import { signInWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '../firebase';
+import React from 'react';
+import './Login.css'; // Ensure the CSS file is in the same directory
 
 const Login = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState(null);
-
-  const handleLogin = async (e) => {
-    e.preventDefault();
-    try {
-      await signInWithEmailAndPassword(auth, email, password);
-      alert('Successfully logged in!');
-    } catch (err) {
-      setError(err.message);
-    }
-  };
-
   return (
-    <div className="auth-container">
-      <h2>Login</h2>
-      <form onSubmit={handleLogin}>
-        <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <button type="submit">Login</button>
-      </form>
-      {error && <p>{error}</p>}
+    <div className="login-page">
+      <div className="login-header">
+        <img src="/images/post8.jpg" alt="Travel" className="login-header-image" /> {/* Direct path */}
+        <h1>Welcome Back!</h1>
+      </div>
+      <div className="login-form-container">
+        <form className="login-form">
+          <label htmlFor="email">Email</label>
+          <input type="email" id="email" placeholder="Enter your email" required />
+          
+          <label htmlFor="password">Password</label>
+          <input type="password" id="password" placeholder="Enter your password" required />
+          
+          <button type="submit">Login</button>
+        </form>
+      </div>
+      <p className="travel-tip">"Adventure awaits! Don't forget to pack your sense of adventure!"</p>
     </div>
   );
 };
