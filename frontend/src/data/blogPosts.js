@@ -64,6 +64,7 @@ const blogPosts = [
       - **Leave Non-Essentials Behind**: If you're unsure, leave it at home. You can always purchase items you truly need at your destination.
     `,
     slug: 'packing-light',
+    
   },
 ];
 

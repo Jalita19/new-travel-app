@@ -1,0 +1,41 @@
+/* src/styles/PostDetailPage.css */
+
+.post-detail-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .post-detail-image {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+  }
+  
+  .comments-list {
+    margin-top: 20px;
+  }
+  
+  .comment {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+  }
+  
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  

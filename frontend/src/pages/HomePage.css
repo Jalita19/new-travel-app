@@ -1,136 +1,66 @@
-.homepage-container {
-    font-family: 'Arial', sans-serif;
-    color: #cca31b;
-  }
-  
-  .homepage-header {
-    background: linear-gradient(to right, #4facfe, #00f2fe);
-    padding: 50px;
-    text-align: center;
-    color: white;
-  }
-  
-  .homepage-header h1 {
-    font-size: 3rem;
-  }
-  
-  .signup-login-section {
-    text-align: center;
-    margin: 30px 0;
-  }
-  
-  .auth-button {
-    background-color: #ff6f61;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    margin: 0 10px;
-    transition: background-color 0.3s;
-  }
-  
-  .auth-button:hover {
-    background-color: #ff856f;
-  }
-  
-  .featured-blogs-section {
-    background-color: #f7f7f7;
-    padding: 50px 20px;
-  }
-  
-  .featured-blogs-section h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-  }
-  
-  .blog-cards {
-    display: flex;
-    justify-content: space-around;
-  }
-  
-  .blog-card {
-    width: 30%;
-    background-color: white;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .blog-card img {
-    width: 100%;
-    border-radius: 8px;
-  }
-  
-  .reviews-section {
-    padding: 50px 20px;
-    text-align: center;
-  }
-  
-  .reviews-section h2 {
-    font-size: 2.5rem;
-  }
-  
-  .reviews {
-    display: flex;
-    justify-content: space-around;
-  }
-  
-  .review {
-    width: 30%;
-    background-color: #ff6f61;
-    color: white;
-    padding: 20px;
-    border-radius: 8px;
-  }
-  
-  .share-experience-section {
-    padding: 50px 20px;
-    text-align: center;
-  }
-  
-  .share-button {
-    background-color: #4facfe;
-    color: white;
-    padding: 15px 25px;
-    border-radius: 5px;
-    text-decoration: none;
-  }
-  
-  .share-button:hover {
-    background-color: #5ec3fe;
-  }
-  
-  .gallery-section {
-    background-color: #f7f7f7;
-    padding: 50px 20px;
-  }
-  
-  .gallery-section h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-  }
-  
-  .gallery-grid {
-    display: flex;
-    justify-content: space-around;
-  }
-  
-  .gallery-item {
-    width: 20%;
-    text-align: center;
-  }
-  
-  .gallery-item img {
-    width: 100%;
-    border-radius: 8px;
-  }
-  
-  .homepage-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: white;
-  }
-  
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.hero {
+  /* background-image: url('/post3.jpg'); Your hero image */
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+main {
+  padding: 20px;
+}
+
+.horizontal-row {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px; /* Space between items */
+}
+
+.story-item, .review-item, .tip-card {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  width: 200px; /* Adjust width as needed */
+}
+
+img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.social-media a, footer a {
+  color: white;
+  margin: 0 10px;
+}
+
+.auth-buttons {
+  text-align: center;
+  margin: 20px 0;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+
+

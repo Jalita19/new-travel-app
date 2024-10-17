@@ -1,96 +1,123 @@
-import React from 'react';
-import './HomePage.css'; // Import your CSS for styling
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import './HomePage.css';
 
-const HomePage = () => {
-  return (
-    <div className="homepage-container">
-      <header className="homepage-header">
-        <h1>Welcome to Travel Diaries</h1>
-        <p>Your gateway to exploring the world through shared stories and experiences!</p>
-      </header>
+const Homepage = () => {
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-      <section className="signup-login-section">
-        <div className="auth-links">
-          <Link to="/signup" className="auth-button">Sign Up</Link>
-          <Link to="/login" className="auth-button">Login</Link>
+    const handleLogin = () => {
+        // Simple authentication logic (replace with real auth)
+        setIsAuthenticated(true);
+    };
+
+    const handleLogout = () => {
+        setIsAuthenticated(false);
+    };
+
+    return (
+        <div className="Homepage">
+            <Hero />
+            <main>
+                {isAuthenticated ? (
+                    <AuthenticatedContent />
+                ) : (
+                    <div className="auth-buttons">
+                        <h2>Please log in to view content</h2>
+                        <button onClick={handleLogin}>Log In</button>
+                    </div>
+                )}
+            </main>
+            <Footer onLogout={handleLogout} isAuthenticated={isAuthenticated} />
         </div>
-        <p>Join our community of travel enthusiasts to post blogs, share advice, and explore tips from fellow travelers.</p>
-      </section>
-
-      <section className="featured-blogs-section">
-        <h2>Featured Blogs</h2>
-        <div className="blog-cards">
-          <div className="blog-card">
-            <img src="/images/post1.jpg" alt="Adventurous Road Trip" />
-            <h3>Best Road Trips in the USA</h3>
-            <p>Discover the most scenic routes from the East to the West Coast.</p>
-          </div>
-          <div className="blog-card">
-            <img src="/images/post2.jpg" alt="Beach Vacation" />
-            <h3>Top 10 Beach Getaways</h3>
-            <p>From sunny California to tropical Florida, find your dream beach destination.</p>
-          </div>
-          <div className="blog-card">
-            <img src="/images/post3.jpg" alt="New York Exploration" />
-            <h3>Exploring New York</h3>
-            <p>The ultimate guide to food, culture, and hidden gems in the Big Apple.</p>
-          </div>
-        </div>
-      </section>
-
-      <section className="reviews-section">
-        <h2>User Reviews</h2>
-        <div className="reviews">
-          <div className="review">
-            <p>"This blog gave me amazing tips for my cross-country trip. So helpful!"</p>
-            <span>- Sarah from Texas</span>
-          </div>
-          <div className="review">
-            <p>"Loved reading about the budget travel hacks. I saved so much on my trip!"</p>
-            <span>- Michael from California</span>
-          </div>
-          <div className="review">
-            <p>"I found the best hidden gems in New York, thanks to Travel Diaries!"</p>
-            <span>- Emma from New York</span>
-          </div>
-        </div>
-      </section>
-
-      <section className="share-experience-section">
-        <h2>Share Your Experience</h2>
-        <p>Been somewhere cool? Share your travel stories and tips with our community!</p>
-        <Link to="/create-post" className="share-button">Create a Blog Post</Link>
-      </section>
-
-      <section className="gallery-section">
-        <h2>Explore By State</h2>
-        <div className="gallery-grid">
-          <div className="gallery-item">
-            <img src="/images/paris.jpg" alt="Florida Beaches" />
-            <h3>Florida</h3>
-          </div>
-          <div className="gallery-item">
-            <img src="/images/tokyo.jpg" alt="California Mountains" />
-            <h3>California</h3>
-          </div>
-          <div className="gallery-item">
-            <img src="/images/post3.jpg" alt="New York City" />
-            <h3>New York</h3>
-          </div>
-          <div className="gallery-item">
-            <img src="/images/post8.jpg" alt="Colorado Hiking" />
-            <h3>Colorado</h3>
-          </div>
-          {/* Add more states as needed */}
-        </div>
-      </section>
-
-      <footer className="homepage-footer">
-        <p>Travel Diaries &copy; 2024 - Your go-to travel blog for adventures, tips, and inspiration!</p>
-      </footer>
-    </div>
-  );
+    );
 };
 
-export default HomePage;
+const Hero = () => (
+    <section className="hero">
+        <h1>Join Our Community</h1>
+        <p>"Share stories, discover tips, and explore the world through travel."</p>
+    </section>
+);
+
+const AuthenticatedContent = () => (
+    <div className="authenticated-content">
+        <FeaturedStories />
+        <UserReviews />
+        <TravelTips />
+    </div>
+);
+
+const FeaturedStories = () => (
+    <section className="featured-stories">
+        <h2>Featured Stories</h2>
+        <div className="horizontal-row">
+            <StoryItem title="Exploring the Alps" description="Breathtaking views and adventure." imgSrc="/post1.jpg" />
+            <StoryItem title="Beach Getaway" description="Sun-soaked shores await you." imgSrc="/post2.jpg" />
+            <StoryItem title="City Adventures" description="Experience vibrant city life." imgSrc="/post3.jpg" />
+        </div>
+    </section>
+);
+
+const StoryItem = ({ title, description, imgSrc }) => (
+    <div className="story-item">
+        <img src={imgSrc} alt={title} />
+        <h3>{title}</h3>
+        <p>{description}</p>
+    </div>
+);
+
+const UserReviews = () => (
+    <section className="user-reviews">
+        <h2>User Reviews</h2>
+        <div className="horizontal-row">
+            <ReviewItem name="Jane Doe" rating="⭐⭐⭐⭐⭐" comment="Travel Tales helped me discover hidden gems!" imgSrc="/user1.jpg" />
+            <ReviewItem name="John Smith" rating="⭐⭐⭐⭐" comment="A great community for travel enthusiasts." imgSrc="/user2.jpg" />
+        </div>
+    </section>
+);
+
+const ReviewItem = ({ name, rating, comment, imgSrc }) => (
+    <div className="review-item">
+        <img src={imgSrc} alt={name} />
+        <h3>{name}</h3>
+        <p>{rating}</p>
+        <p>"{comment}"</p>
+    </div>
+);
+
+const TravelTips = () => (
+    <section className="tips">
+        <h2>Travel Tips</h2>
+        <div className="horizontal-row">
+            <TipCard title="Packing Essentials" description="What to bring for a hassle-free trip." imgSrc="/tip1.jpg" />
+            <TipCard title="Budget Travel" description="How to travel without breaking the bank." imgSrc="/tip2.jpg" />
+        </div>
+    </section>
+);
+
+const TipCard = ({ title, description, imgSrc }) => (
+    <div className="tip-card">
+        <img src={imgSrc} alt={title} />
+        <h3>{title}</h3>
+        <p>{description}</p>
+    </div>
+);
+
+const Footer = ({ onLogout, isAuthenticated }) => (
+    <footer>
+        <div>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">FAQs</a></li>
+            </ul>
+            <div className="social-media">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+            </div>
+            {isAuthenticated && <button onClick={onLogout}>Log Out</button>}
+        </div>
+    </footer>
+);
+
+export default Homepage;

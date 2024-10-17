@@ -1,30 +1,66 @@
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar'; // Your existing Navbar
+import React, { useEffect, useState } from 'react';
+import { Routes, Route, Navigate } from 'react-router-dom';
+import Navbar from './components/Navbar';
 import MapPage from './pages/MapPage';
-import BlogPage from './pages/BlogPage'; // Blog Page
-import SignUp from './components/SignUp'; // SignUp component for Firebase
-import Login from './components/Login'; // Login component for Firebase
-import BlogPostPage from './pages/BlogPostPage'; // Blog Post component
-import HomePage from './pages/HomePage'; // HomePage component
-import ContactPage from './pages/ContactPage'; // Your contact page
+import BlogPage from './components/BlogPage';
+import SignUp from './components/SignUp';
+import Login from './components/Login';
+import BlogPostPage from './pages/BlogPostPage';
+import HomePage from './pages/HomePage';
+import ContactPage from './pages/ContactPage';
 import AboutPage from './components/About';
+import PostPage from './components/PostPage';
+import PostDetailPage from './components/PostDetailPage';
+import { auth } from './firebaseConfig';
+import { onAuthStateChanged, signOut } from 'firebase/auth';
+
+const ProtectedRoute = ({ children, user }) => {
+  return user ? children : <Navigate to="/login" />;
+};
+
+const NotFound = () => (
+  <div style={{ textAlign: 'center', margin: '50px' }}>
+    <h1>404 - Not Found</h1>
+    <p>The page you are looking for does not exist.</p>
+  </div>
+);
+
 const App = () => {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+    });
+
+    return () => {
+      unsubscribe();
+    };
+  }, []);
+
+  const handleSignOut = () => {
+    signOut(auth);
+  };
+
   return (
     <>
-      <Navbar />
+      <Navbar user={user} handleSignOut={handleSignOut} />
       <Routes>
-        <Route path="/home" element={<HomePage />} /> {/* Set HomePage as the home page */}
+        <Route path="/home" element={<HomePage />} />
         <Route path="/map" element={<MapPage />} />
-        <Route path="/blog" element={<BlogPage />} /> {/* Blog Page Route */}
-        <Route path="/blog/:slug" element={<BlogPostPage />} /> {/* Route for individual blog posts */}
-        <Route path="/signup" element={<SignUp />} /> {/* SignUp Page for registration */}
-        <Route path="/login" element={<Login />} /> {/* Login Page for user authentication */}
+        <Route path="/blog" element={<BlogPage />} />
+        <Route path="/blog/:slug" element={<BlogPostPage />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/post" element={<ProtectedRoute user={user}><PostPage /></ProtectedRoute>} />
+        <Route path="/post/:postId" element={<PostDetailPage />} />
+        <Route path="*" element={<NotFound />} /> {/* Catch-all for 404 */}
       </Routes>
     </>
   );
 };
 
 export default App;
+

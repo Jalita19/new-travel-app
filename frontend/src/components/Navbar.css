@@ -1,4 +1,3 @@
-/* Navbar.css */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -26,11 +25,12 @@
 
 .navbar-links {
   display: flex; /* Ensures links are in a row */
+  justify-content: center; /* Center the links */
+  gap: 20px; /* Space between links */
 }
 
 .navbar-links a {
   color: #d4af37; /* Light gold accent for links */
-  margin-left: 30px; /* Space out the titles */
   text-decoration: none;
   font-weight: bold;
   font-size: 1rem; /* Adjust font size for titles if necessary */
@@ -60,7 +60,23 @@
   color: #121212; /* Dark text on gold */
 }
 
-.signup-btn:hover, .login-btn:hover {
+.signup-btn:hover,
+.login-btn:hover {
   background-color: #f0f0f0; /* Light background on hover */
   color: #121212; /* Dark text on hover */
 }
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .navbar-links {
+    flex-direction: column; /* Stack links vertically on smaller screens */
+    margin-top: 10px; /* Add margin on top */
+    gap: 10px; /* Space between vertical links */
+  }
+}
+
+/* Accessibility - Focus States */
+.navbar-links a:focus {
+  outline: 2px solid #d4af37; /* Focus outline for accessibility */
+}
+
