@@ -1,0 +1,68 @@
+/* src/styles/PostDetail.css */
+
+.post-detail-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9; /* Lighter background */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.post-image {
+    width: 100%; /* Full width */
+    height: auto;
+    border-radius: 5px;
+}
+
+h1 {
+    color: #333; /* Title color */
+}
+
+.post-date {
+    color: #777; /* Date color */
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+
+.post-content {
+    color: #555; /* Content color */
+    line-height: 1.6;
+}
+
+.author-info {
+    margin-top: 20px;
+    font-style: italic; /* Italics for author info */
+    color: #333; /* Author color */
+}
+
+.back-button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #6c757d; /* Secondary button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none; /* Remove underline from links */
+    cursor: pointer;
+    margin-bottom: 20px; /* Space below the button */
+}
+
+.back-button:hover {
+    background-color: #5a6268; /* Darker shade on hover */
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #007bff; /* Primary button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}

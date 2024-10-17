@@ -4,94 +4,96 @@
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #f0f0f0; /* Light background for contrast */
+    background-color: #f9f9f9; /* Lighter background color */
+    color: #333; /* Dark text color for visibility */
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .previous-posts {
+}
+
+.previous-posts {
     margin-bottom: 30px;
-  }
-  
-  .post-item {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 15px;
-    margin-bottom: 20px;
-    cursor: pointer;
+}
+
+.section-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.posts-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.post-item {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer; /* Change cursor to indicate clickable */
+    background-color: #ffffff; /* White background for each post */
     transition: box-shadow 0.3s ease;
-  }
-  
-  .post-item:hover {
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  }
-  
-  .post-title {
-    font-size: 1.5rem;
-    color: #333;
-    margin: 0 0 10px;
-  }
-  
-  .post-date {
-    font-size: 0.9rem;
-    color: #888;
-    margin-bottom: 10px;
-  }
-  
-  .post-content {
-    font-size: 1rem;
-    color: #444;
-    margin-bottom: 10px;
-  }
-  
-  .read-more-button {
-    background-color: #007bff; /* Bootstrap primary color */
+}
+
+.post-item:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Light shadow on hover */
+}
+
+.post-image {
+    max-width: 100%; /* Adjusting to make images responsive */
+    height: auto;
+    border-radius: 5px;
+}
+
+.post-title {
+    font-size: 20px;
+    margin: 10px 0;
+    color: #0056b3; /* Blue color for titles */
+}
+
+.post-content {
+    font-size: 16px;
+    color: #444; /* Darker color for content */
+}
+
+.read-more-button {
+    background-color: #007bff; /* Royal blue button */
     color: white;
     border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
+    padding: 10px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .read-more-button:hover {
+    border-radius: 5px; /* Rounded corners */
+}
+
+.read-more-button:hover {
     background-color: #0056b3; /* Darker shade for hover effect */
-  }
-  
-  .post-form {
-    background-color: #ffffff;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .post-form input,
-  .post-form textarea {
+}
+
+.post-form-container {
+    margin-top: 40px;
+}
+
+.post-form input,
+.post-form textarea {
     width: 100%;
     padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
     border-radius: 5px;
-  }
-  
-  .post-form input[type="file"] {
-    border: none; /* Hide the border for the file input */
-  }
-  
-  .post-form button {
+}
+
+.post-form button {
     background-color: #28a745; /* Green color for submit button */
     color: white;
     border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
+    padding: 10px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .post-form button:hover {
+    border-radius: 5px; /* Rounded corners */
+}
+
+.post-form button:hover {
     background-color: #218838; /* Darker shade for hover effect */
-  }
+}
+
   
   
   

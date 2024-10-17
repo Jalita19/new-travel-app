@@ -1,41 +1,38 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import './HomePage.css'; // Make sure you have this CSS file
+import './HomePage.css'; // Ensure this CSS file exists
 
 const HomePage = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-  const handleLogin = () => {
-    // Implement login logic
-    setIsLoggedIn(true);
-  };
-
-  const handleLogout = () => {
-    // Implement logout logic
-    setIsLoggedIn(false);
-  };
-
   return (
     <div className="home-container">
-      <img src="./images/post1.jpg" alt="Travel Banner" className="banner-image" />
+      <img src="/images/post1.jpg" alt="Travel Banner" className="banner-image" />
 
-      <div className="auth-container">
-        {isLoggedIn ? (
-          <>
-            <h2>Welcome Back!</h2>
-            <button onClick={handleLogout} className="btn">Log Out</button>
-          </>
-        ) : (
-          <>
-            <h2>Please Log In or Sign Up</h2>
-            <button onClick={handleLogin} className="btn">Log In</button>
-            <Link to="/signup" className="btn">Sign Up</Link>
-          </>
-        )}
+      <div className="info-container">
+        <h2>Welcome to Our Travel App!</h2>
+        <p>Discover amazing places and plan your next adventure with us.</p>
+        <Link to="/about" className="btn">Explore Now</Link> {/* Changed to /about */}
+      </div>
+
+      <div className="explore-section">
+        <h3>Explore Destinations</h3>
+        <div className="destinations">
+          <div className="destination-item">
+            <img src="/images/post2.jpg" alt="Destination 1" />
+            <h4>Destination 1</h4>
+          </div>
+          <div className="destination-item">
+            <img src="/images/post3.jpg" alt="Destination 2" />
+            <h4>Destination 2</h4>
+          </div>
+          <div className="destination-item">
+            <img src="/images/post4.jpg" alt="Destination 3" />
+            <h4>Destination 3</h4>
+          </div>
+        </div>
       </div>
 
       <div className="reviews-section">
-        <h3>User Reviews</h3>
+        <h3>User Reviews</h3> 
         <div className="reviews">
           <div className="review-item">“Great travel tips!” - User A</div>
           <div className="review-item">“Helped me save a lot!” - User B</div>
@@ -63,6 +60,7 @@ const HomePage = () => {
           </div>
         </div>
       </div>
+
       <footer className="footer">
         <p>&copy; {new Date().getFullYear()} Your Travel Company. All Rights Reserved.</p>
         <nav>
@@ -74,7 +72,4 @@ const HomePage = () => {
   );
 };
 
-
 export default HomePage;
-
-

@@ -13,6 +13,8 @@ import PostPage from './components/PostPage';
 import PostDetailPage from './components/PostDetailPage';
 import { auth } from './firebaseConfig';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
+import PostDetail from './pages/PostDetail';
+
 
 const ProtectedRoute = ({ children, user }) => {
   return user ? children : <Navigate to="/login" />;
@@ -57,6 +59,7 @@ const App = () => {
         <Route path="/post" element={<ProtectedRoute user={user}><PostPage /></ProtectedRoute>} />
         <Route path="/post/:postId" element={<PostDetailPage />} />
         <Route path="*" element={<NotFound />} /> {/* Catch-all for 404 */}
+        <Route path="/post-detail" element={<PostDetail />} />
       </Routes>
     </>
   );

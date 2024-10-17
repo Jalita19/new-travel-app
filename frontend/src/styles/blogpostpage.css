@@ -1,78 +1,66 @@
 /* src/styles/blogpostpage.css */
 .blog-post-container {
-    font-family: Arial, sans-serif;
-    color: #f0f0f0;
-    background-color: #222; /* Dark background for contrast */
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    background-color: #f5f5f5; /* Light background */
+    color: #333; /* Dark text color */
+    max-width: 800px;
+    margin: auto;
   }
   
   .blog-header-image {
     width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 10px;
+    height: auto;
+    border-radius: 8px;
     margin-bottom: 20px;
   }
   
   h1 {
-    color: #1e90ff; /* Vibrant blue for titles */
-    font-size: 2.5em;
-    text-align: center;
+    color: #0073e6; /* Primary color */
+  }
+  
+  h2 {
+    color: #ff5722; /* Secondary color */
   }
   
   .post-date {
-    font-size: 1em;
-    color: #888; /* Lighter color for date */
-    text-align: center;
-  }
-  
-  .post-content {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-  }
-  
-  .back-link {
-    color: #1e90ff;
-    text-decoration: underline;
-  }
-  
-  .back-link:hover {
-    color: #0b75d4; /* Darker shade on hover */
+    font-size: 0.9em;
+    color: #666; /* Lighter text for date */
   }
   
   .new-post-form {
-    margin-top: 40px;
-    background-color: #333;
-    padding: 20px;
-    border-radius: 10px;
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
   }
   
   .new-post-form input,
   .new-post-form textarea {
     width: 100%;
     padding: 10px;
-    margin-bottom: 15px;
-    background-color: #444;
-    border: 1px solid #666;
+    margin: 10px 0;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    color: #f0f0f0;
-    font-size: 1em;
   }
   
   .new-post-form button {
-    background-color: #1e90ff;
+    background-color: #0073e6; /* Match with header */
     color: #fff;
-    padding: 10px 20px;
+    padding: 10px;
     border: none;
     border-radius: 5px;
-    font-size: 1.2em;
     cursor: pointer;
   }
   
   .new-post-form button:hover {
-    background-color: #0b75d4;
+    background-color: #005bb5; /* Darker shade on hover */
   }
   
+  .back-link {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #0073e6; /* Match with header */
+  }
   

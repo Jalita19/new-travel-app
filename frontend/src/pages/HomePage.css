@@ -1,117 +1,117 @@
-body {
-  background-color: #f0f0f0; /* Light background for the overall page */
-  color: #333; /* Dark text color for readability */
-}
+/* src/styles/Home.css */
 
+/* Home Container Styles */
 .home-container {
-  text-align: center;
-  margin: 0 auto;
-  padding: 20px;
+  text-align: center; /* Center-align text */
+  padding: 20px; /* Padding around the container */
+  font-family: Arial, sans-serif; /* Font style */
 }
 
+/* Banner Image */
 .banner-image {
-  width: 100%;
-  height: auto;
-  margin-bottom: 20px;
+  width: 100%; /* Full-width image */
+  max-height: 250px; /* Limit height of the banner image */
+  object-fit: cover; /* Cover the area without distortion */
 }
 
-.auth-container {
-  margin: 20px 0;
+/* Info Container Styles */
+.info-container {
+  margin-top: 20px; /* Space above info section */
+  color: #e2d9d9; /* Lighter color for text */
 }
 
+/* Button Styles */
 .btn {
-  padding: 10px 20px;
-  margin: 5px;
-  border: none;
-  background-color: #0056b3; /* Darker blue for buttons */
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
+  display: inline-block; /* Make button a block element */
+  padding: 15px 30px; /* Increased padding for button */
+  margin-top: 15px; /* Space above the button */
+  background-color: #007bff; /* Button background color */
+  color: white; /* Button text color */
+  text-decoration: none; /* Remove underline */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s; /* Smooth transition */
+  font-size: 16px; /* Increased font size */
 }
 
 .btn:hover {
-  background-color: #004494; /* Even darker blue on hover */
+  background-color: #0056b3; /* Darker shade on hover */
 }
 
+/* Section Styles */
+.explore-section,
+.features {
+  margin-top: 30px; /* Space above sections */
+  color: #e2d9d9; /* Even lighter text color for sections */
+  font-size: 18px; /* Increased font size for sections */
+}
+
+/* Reviews Section */
 .reviews-section {
-  padding: 20px;
-  background-color: #fff; /* White background for contrast */
-  border-radius: 8px;
-  margin: 20px 0;
-}
-
-.reviews-section h3 {
-  font-size: 1.8em;
-  margin-bottom: 10px;
-  text-align: center;
-  color: #0056b3; /* Darker blue for headings */
+  margin-top: 30px; /* Space above reviews section */
 }
 
 .reviews {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: flex; /* Use Flexbox for layout */
+  justify-content: center; /* Center the reviews */
+  flex-wrap: wrap; /* Allow wrapping */
 }
 
 .review-item {
-  background-color: #e9ecef; /* Light gray for review items */
-  padding: 15px;
-  margin: 10px;
-  border: 1px solid #ced4da; /* Light border */
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-  font-size: 1.2em;
-  max-width: 300px;
-  text-align: center;
-  color: #333; /* Dark text for readability */
+  margin: 10px; /* Space around review items */
+  padding: 15px; /* Increased padding inside review items */
+  border: 1px solid #ddd; /* Border around review items */
+  border-radius: 5px; /* Rounded corners */
+  max-width: 220px; /* Increased max width for review items */
+  background-color: rgba(255, 255, 255, 0.95); /* Slightly lighter background for reviews */
+  color: #181616; /* Text color */
+  font-size: 16px; /* Increased font size for reviews */
 }
 
-.features {
-  margin-top: 40px;
-}
-
+/* Destinations and Feature Items */
+.destinations,
 .feature-items {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  display: flex; /* Use Flexbox for layout */
+  justify-content: center; /* Center items */
+  flex-wrap: wrap; /* Allow items to wrap */
 }
 
+.destination-item,
 .feature-item {
-  width: 30%;
-  margin: 20px 0;
-  text-align: center;
+  margin: 10px; /* Space around items */
+  text-align: center; /* Center text inside items */
+  width: 220px; /* Increased width of items */
+  border: 1px solid #ddd; /* Border around items */
+  border-radius: 5px; /* Rounded corners */
+  overflow: hidden; /* Prevent overflow of content */
 }
 
+/* Image Styles */
+.destination-item img,
 .feature-item img {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
+  width: 100%; /* Full width for images */
+  height: auto; /* Maintain aspect ratio */
+  transition: transform 0.3s; /* Smooth image transition */
 }
 
-h4 {
-  margin-top: 10px;
+.destination-item:hover img,
+.feature-item:hover img {
+  transform: scale(1.05); /* Scale effect on hover */
 }
 
-.footer {
-  background-color: #333; /* Dark footer */
-  color: white;
-  padding: 20px;
-  text-align: center;
-  position: relative;
-  bottom: 0;
-  width: 100%;
+/* Footer Styles */
+footer {
+  margin-top: 40px; /* Space above footer */
+  padding: 20px 0; /* Padding for footer */
+  background-color: #f8f9fa; /* Light background for footer */
+  color: #666; /* Lighter footer text color */
 }
 
-.footer nav {
-  margin-top: 10px;
+footer nav a {
+  margin: 0 10px; /* Space around links */
+  color: #007bff; /* Link color */
+  text-decoration: none; /* Remove underline */
 }
 
-.footer a {
-  color: white;
-  margin: 0 10px;
-  text-decoration: none;
-}
-
-.footer a:hover {
-  text-decoration: underline;
+footer nav a:hover {
+  text-decoration: underline; /* Underline on hover */
 }

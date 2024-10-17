@@ -11,7 +11,6 @@ const BlogPage = () => {
     <div className="blog-container">
       <h1 className="blog-title">Welcome to My Travel Blog</h1>
       <p className="blog-intro">Your go-to resource for tips on budget traveling, flight deals, and more!</p>
-      <Link to="/post" className="add-post-button">Add a New Post</Link>
       <div className="blog-posts">
         {posts.map((post, index) => (
           <article className="blog-post" key={index}>

@@ -5,28 +5,28 @@ import { useNavigate } from 'react-router-dom';
 
 const PostPage = () => {
   const navigate = useNavigate();
-  
+
   // Initialize generic posts
   const [previousPosts, setPreviousPosts] = useState([
     {
       title: 'Exploring the Grand Canyon',
       content: 'The Grand Canyon is a natural wonder that offers breathtaking views and numerous hiking trails.',
       date: '2024-10-01',
-      image: './images/post3.jpg', // Replace with your image URL
+      image: './images/post3.jpg',
       slug: 'exploring-the-grand-canyon',
     },
     {
       title: 'A Journey Through Paris',
       content: 'Paris, known as the City of Light, is famous for its art, fashion, and cuisine. A must-visit!',
       date: '2024-10-02',
-      image: './images/post8.jpg', // Replace with your image URL
+      image: './images/post8.jpg',
       slug: 'a-journey-through-paris',
     },
     {
       title: 'Safari Adventure in Kenya',
       content: 'Experience the wild in Kenya. The diverse wildlife and stunning landscapes are unforgettable.',
       date: '2024-10-03',
-      image: './images/post2.jpg', // Replace with your image URL
+      image: './images/post2.jpg',
       slug: 'safari-adventure-in-kenya',
     },
   ]);
@@ -46,9 +46,10 @@ const PostPage = () => {
   };
 
   const handleImageChange = (e) => {
+    const file = e.target.files[0];
     setFormData({
       ...formData,
-      image: e.target.files[0],
+      image: URL.createObjectURL(file), // Create a local URL for the uploaded image
     });
   };
 
@@ -75,7 +76,7 @@ const PostPage = () => {
       <div className="previous-posts">
         {previousPosts.map((post, index) => (
           <div className="post-item" key={index} onClick={() => handleReadMore(post)}>
-            {post.image && <img src={post.image} alt={post.title} />}
+            {post.image && <img src={post.image} alt={post.title} className="post-image" />}
             <h3 className="post-title">{post.title}</h3>
             <small className="post-date">{post.date}</small>
             <p className="post-content">{post.content.substring(0, 150)}...</p>
@@ -114,5 +115,3 @@ const PostPage = () => {
 };
 
 export default PostPage;
-
-

@@ -1,62 +1,90 @@
+/* src/styles/Blog.css */
+
+/* Container Styles */
 .blog-container {
-  padding: 20px;
-  background-color: #f0f0f0; /* Light background color */
-  color: #333; /* Dark text color */
+  padding: 20px; /* Padding around the container */
+  background-color: #f4f4f4; /* Lighter background color */
+  color: #333; /* Darker text color for contrast */
 }
 
+/* Title Styles */
 .blog-title {
-  font-size: 2.5em;
-  color: #0056b3; /* Primary color from your color scheme */
-  text-align: center;
-  margin-bottom: 10px;
+  font-size: 2.5em; /* Large font size for the title */
+  color: #ff6f61; /* Vibrant title color */
+  text-align: center; /* Centered text */
+  margin-bottom: 10px; /* Space below the title */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Subtle shadow */
 }
 
+/* Intro Styles */
 .blog-intro {
-  font-size: 1.2em;
-  color: #555; /* Secondary color for the intro text */
-  text-align: center;
-  margin-bottom: 20px;
+  font-size: 1.2em; /* Font size for intro text */
+  color: #333; /* Darker intro text */
+  text-align: center; /* Centered text */
+  margin-bottom: 20px; /* Space below the intro */
 }
 
+/* Posts Container */
 .blog-posts {
-  display: flex;
-  flex-direction: column;
+  display: flex; /* Flexbox layout */
+  flex-direction: column; /* Stack items vertically */
   gap: 20px; /* Space between blog posts */
 }
 
+/* Individual Post Styles */
 .blog-post {
-  background-color: #ffffff; /* Card background color */
-  border: 1px solid #ddd; /* Light border */
+  background-color: #ffffff; /* White for card background */
+  border: 1px solid #ddd; /* Light gray border */
   border-radius: 8px; /* Rounded corners */
-  padding: 15px;
-  transition: box-shadow 0.3s ease;
+  padding: 15px; /* Padding inside each post */
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+  word-wrap: break-word; /* Ensure text wraps */
 }
 
+/* Post Hover Effects */
 .blog-post:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+  transform: translateY(-2px); /* Slight lift effect */
 }
 
+/* Post Title Styles */
 .post-title {
-  font-size: 1.5em;
-  color: #0056b3; /* Use the same primary color for titles */
-  margin: 0;
+  font-size: 1.5em; /* Font size for post titles */
+  color: #333; /* Darker color for post titles */
+  margin: 0; /* No margin */
 }
 
+/* Post Date Styles */
 .post-date {
-  font-size: 0.9em;
-  color: #888; /* Date color */
+  font-size: 0.9em; /* Font size for post date */
+  color: #777; /* Softer gray for the date */
 }
 
+/* Post Excerpt Styles */
 .post-excerpt {
-  font-size: 1em;
-  margin: 10px 0;
+  font-size: 1em; /* Font size for post excerpt */
+  margin: 10px 0; /* Space above and below the excerpt */
 }
 
+/* Read More Button Styles */
 .read-more {
-  color: #0056b3; /* Link color */
-  text-decoration: underline;
+  display: inline-block; /* Make it a block element for padding */
+  background-color: #4169e1; /* Royal blue button background color */
+  color: #fff; /* White text */
+  padding: 10px 15px; /* Padding for button */
+  border-radius: 5px; /* Rounded corners */
+  text-decoration: none; /* Remove underline */
+  text-align: center; /* Center text */
+  transition: background-color 0.3s; /* Smooth hover effect */
+  margin-top: 10px; /* Space above the button */
 }
 
+/* Read More Button Hover Effect */
 .read-more:hover {
-  color: #003d80; /* Darker shade on hover */
+  background-color: #365eab; /* Darker royal blue shade on hover */
 }
+
+
+
+
+
