@@ -1,66 +1,117 @@
-
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+  background-color: #f0f0f0; /* Light background for the overall page */
+  color: #333; /* Dark text color for readability */
 }
 
-.hero {
-  /* background-image: url('/post3.jpg'); Your hero image */
-  background-size: cover;
-  color: white;
+.home-container {
   text-align: center;
-  padding: 100px 20px;
-}
-
-main {
+  margin: 0 auto;
   padding: 20px;
 }
 
-.horizontal-row {
-  display: flex;
-  overflow-x: auto;
-  gap: 20px; /* Space between items */
+.banner-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
 }
 
-.story-item, .review-item, .tip-card {
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 15px;
-  width: 200px; /* Adjust width as needed */
-}
-
-img {
-  max-width: 100%;
-  border-radius: 5px;
-}
-
-footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 20px;
-}
-
-.social-media a, footer a {
-  color: white;
-  margin: 0 10px;
-}
-
-.auth-buttons {
-  text-align: center;
+.auth-container {
   margin: 20px 0;
 }
 
-button {
-  padding: 10px 15px;
-  background-color: #ff6600;
-  color: white;
+.btn {
+  padding: 10px 20px;
+  margin: 5px;
   border: none;
+  background-color: #0056b3; /* Darker blue for buttons */
+  color: white;
   border-radius: 5px;
   cursor: pointer;
 }
 
+.btn:hover {
+  background-color: #004494; /* Even darker blue on hover */
+}
 
+.reviews-section {
+  padding: 20px;
+  background-color: #fff; /* White background for contrast */
+  border-radius: 8px;
+  margin: 20px 0;
+}
 
+.reviews-section h3 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #0056b3; /* Darker blue for headings */
+}
 
+.reviews {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.review-item {
+  background-color: #e9ecef; /* Light gray for review items */
+  padding: 15px;
+  margin: 10px;
+  border: 1px solid #ced4da; /* Light border */
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  font-size: 1.2em;
+  max-width: 300px;
+  text-align: center;
+  color: #333; /* Dark text for readability */
+}
+
+.features {
+  margin-top: 40px;
+}
+
+.feature-items {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.feature-item {
+  width: 30%;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.feature-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+h4 {
+  margin-top: 10px;
+}
+
+.footer {
+  background-color: #333; /* Dark footer */
+  color: white;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer nav {
+  margin-top: 10px;
+}
+
+.footer a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}

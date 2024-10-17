@@ -12,21 +12,21 @@ const PostPage = () => {
       title: 'Exploring the Grand Canyon',
       content: 'The Grand Canyon is a natural wonder that offers breathtaking views and numerous hiking trails.',
       date: '2024-10-01',
-      image: 'https://example.com/grand-canyon.jpg', // Replace with your image URL
+      image: './images/post3.jpg', // Replace with your image URL
       slug: 'exploring-the-grand-canyon',
     },
     {
       title: 'A Journey Through Paris',
       content: 'Paris, known as the City of Light, is famous for its art, fashion, and cuisine. A must-visit!',
       date: '2024-10-02',
-      image: 'https://example.com/paris.jpg', // Replace with your image URL
+      image: './images/post8.jpg', // Replace with your image URL
       slug: 'a-journey-through-paris',
     },
     {
       title: 'Safari Adventure in Kenya',
       content: 'Experience the wild in Kenya. The diverse wildlife and stunning landscapes are unforgettable.',
       date: '2024-10-03',
-      image: 'https://example.com/kenya-safari.jpg', // Replace with your image URL
+      image: './images/post2.jpg', // Replace with your image URL
       slug: 'safari-adventure-in-kenya',
     },
   ]);

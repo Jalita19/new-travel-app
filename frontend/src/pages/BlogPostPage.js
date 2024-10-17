@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import '../styles/blogpostpage.css'; // Add any specific styles for blog post page
 
-const blogPosts = [
+const initialBlogPosts= [
   {
     title: 'Finding Cheap Flights: Tips and Tricks',
     date: 'October 15, 2024',
@@ -95,30 +95,27 @@ const blogPosts = [
     image: '/images/post5.jpg', // Add your image paths
   },
 ];
-
 const BlogPostPage = () => {
   const { slug } = useParams(); // Get the post slug from the URL
-  const post = blogPosts.find((post) => post.slug === slug);
-
-  const [newPost, setNewPost] = useState({
-    title: '',
-    content: '',
-  });
-
-  const handleChange = (e) => {
-    setNewPost({ ...newPost, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle the creation of the new post (e.g., API call)
-    console.log('New post created:', newPost);
-    setNewPost({ title: '', content: '' }); // Reset form
-  };
+  const post = initialBlogPosts.find((post) => post.slug === slug);
+  const [comments, setComments] = useState([]);
+  const [newComment, setNewComment] = useState('');
 
   if (!post) {
     return <h1>Blog post not found</h1>;
   }
+
+  const handleCommentChange = (e) => {
+    setNewComment(e.target.value);
+  };
+
+  const handleCommentSubmit = (e) => {
+    e.preventDefault();
+    if (newComment.trim()) {
+      setComments([...comments, newComment]);
+      setNewComment(''); // Clear the input field
+    }
+  };
 
   return (
     <div className="blog-post-container">
@@ -128,29 +125,43 @@ const BlogPostPage = () => {
       <div className="post-content" dangerouslySetInnerHTML={{ __html: post.content }}></div>
       <a href="/blog" className="back-link">Back to Blog</a>
 
-      {/* New Post Form */}
-      <h2>Create a New Post</h2>
-      <form onSubmit={handleSubmit} className="new-post-form">
-        <input
-          type="text"
-          name="title"
-          value={newPost.title}
-          onChange={handleChange}
-          placeholder="Post Title"
-          required
-        />
+      {/* Comments Section */}
+      <h2>Comments</h2>
+      <form onSubmit={handleCommentSubmit} className="comment-form">
         <textarea
-          name="content"
-          value={newPost.content}
-          onChange={handleChange}
-          placeholder="Post Content"
+          value={newComment}
+          onChange={handleCommentChange}
+          placeholder="Leave a comment..."
           required
         />
-        <button type="submit">Create Post</button>
+        <button type="submit">Submit</button>
       </form>
+
+      <div className="comments-list">
+        {comments.length > 0 ? (
+          comments.map((comment, index) => (
+            <div key={index} className="comment">
+              <p>{comment}</p>
+            </div>
+          ))
+        ) : (
+          <p>No comments yet. Be the first to leave one!</p>
+        )}
+      </div>
+
+      {/* Displaying all blog posts */}
+      <h2>Other Posts</h2>
+      <div className="other-posts">
+        {initialBlogPosts.map((p) => (
+          <div key={p.slug} className="post-preview">
+            <h3>{p.title}</h3>
+            <p><small>{p.date}</small></p>
+            <a href={`/blog/${p.slug}`}>Read more</a>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
 
 export default BlogPostPage;
-
